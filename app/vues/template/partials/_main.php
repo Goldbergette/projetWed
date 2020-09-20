@@ -12,13 +12,7 @@
                  <div class="blog_left_sidebar">
                     <?php echo $content; ?>
 
-                     <nav class="blog-pagination justify-content-center d-flex">
-                         <ul class="pagination">
-                             <li class="page-item">
-                                 <a href="#" class="page-link" style="width: auto; padding: 0 1em;">More posts</a>
-                             </li>
-                         </ul>
-                     </nav>
+                    
                  </div>
              </div>
              <div class="col-lg-4">

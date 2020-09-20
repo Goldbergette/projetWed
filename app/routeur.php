@@ -10,6 +10,11 @@ ROUTE PAR DEFAUT: liste des posts (les 5 derniers)
 
 
 */
+if(isset($_GET['postID'])):
+  include_once '../app/controleurs/postsControleur.php';
+  \App\Controleurs\Posts\showAction($connexion, $_GET['postID']);
 
+else:
 include_once '../app/controleurs/postsControleur.php';
   \App\Controleurs\Posts\indexAction($connexion);
+endif;

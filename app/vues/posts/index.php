@@ -14,7 +14,7 @@
     </div>
 
     <div class="blog_details">
-        <a class="d-inline-block" href="single-blog.html">
+        <a class="d-inline-block" href="?postID=<?php echo $post['id']; ?>">
             <h2><?php echo $post['title']; ?></h2>
         </a>
         <p><?php echo $post['resum'] ?></p>
@@ -24,3 +24,10 @@
     </div>
 </article>
 <?php endforeach; ?>
+<nav class="blog-pagination justify-content-center d-flex">
+    <ul class="pagination">
+        <li class="page-item">
+            <a href="#" class="page-link" style="width: auto; padding: 0 1em;">More posts</a>
+        </li>
+    </ul>
+</nav>
