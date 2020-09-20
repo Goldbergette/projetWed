@@ -6,7 +6,8 @@
 namespace App\Modeles\Posts;
 
 function findAll(\PDO $connexion) {
-  $sql = "SELECT *
+  $sql = "SELECT id, title, created_at, image, SUBSTR(content, 1, 100) as resum,
+          DATE_FORMAT(created_at, '%b') as mois
           FROM posts
           ORDER BY created_at DESC
           LIMIT 5;";
