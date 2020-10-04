@@ -19,8 +19,14 @@ RewriteEngine on
 
   # FORMULAIRE DE CONNEXION AU BACKOFFICE
   # PATTERN: users/login
-  # VERS: index.php?users=login
+  # VERS: index.php?users=loginForm
   RewriteRule ^users\/login\/form$ index.php?users=loginForm [L]
+
+  # CONNEXION AU FORMULAIRE
+  # PATTERN: users/login/submit
+  # VERS: index.php?users=login
+  RewriteRule ^users\/login\/submit$ index.php?users=login [L]
+
 
 
 
