@@ -2,6 +2,12 @@
 /*
 ./app/routeur.php
 */
+  //route des users
+  if (isset($_GET['categories'])):
+    include_once '../app/routeurs/categories.php';
+    
+  elseif(isset($_GET['users'])):
+    include_once '../app/routeurs/usersRouteur.php';
 
-  include_once '../app/controleurs/usersControleur.php';
-  \App\Controleurs\Users\dashboardAction($connexion);
+
+  endif;

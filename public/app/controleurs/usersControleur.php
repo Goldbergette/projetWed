@@ -18,6 +18,7 @@ namespace App\Controleurs\Users;
     $user = User\findOneByLoginPwd($connexion, $_POST['login'], $_POST['password']);
 
     if($user):
+      $_SESSION['user']=$user;
       header('location:' . BASE_URL_ADMIN);
     else:
       header('location:' . BASE_URL_PUBLIC . 'users/login/form');

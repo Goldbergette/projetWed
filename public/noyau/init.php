@@ -3,6 +3,7 @@
 ./noyau/init.php
 Initialisation de l'application
 */
+session_start();
 
 require_once '../app/config/parametres.php';
 require_once '../noyau/connexion.php';
