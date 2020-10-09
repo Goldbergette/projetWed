@@ -13,4 +13,31 @@ switch ($_GET['categories']):
   //Action: index
   Categories\indexAction($connexion);
   break;
+
+  case 'addForm':
+  //AJOUT CATEGORIES
+  //PATTERN: /index.php?categories=addForm
+  //CTRL: categoriesControleur
+  //Action: addForm
+  Categories\addFormAction();
+  break;
+
+  case 'add':
+  //INSERT CATEGORIES
+  //PATTERN: /index.php?categories=add
+  //CTRL: categoriesControleur
+  //ACTION: add
+  Categories\addAction($connexion, [
+    'name' => $_POST['name']
+  ]);
+  break;
+
+  case 'delete':
+  //DELETE CATEGORIES
+  //PATTERN: /index.php?categories=delete&id=x
+  //CTRL: categoriesControleur
+  //ACTION: delete
+  Categories\deleteAction($connexion, $_GET['id']);
+  break;
+
 endswitch;
