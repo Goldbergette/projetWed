@@ -40,4 +40,23 @@ switch ($_GET['categories']):
   Categories\deleteAction($connexion, $_GET['id']);
   break;
 
+  case 'editForm':
+  //EDITION CATEGORIES
+  //PATTERN: /index.php?categories=editForm&id=x
+  //CTRL: categoriesControleur
+  //ACTION: editForm
+  Categories\editFormAction($connexion, $_GET['id']);
+  break;
+
+  case 'edit':
+  //UPDATE CATEGORIES
+  //PATTERN: /index.php?categories=edit&id=x
+  //CTRL: categoriesControleur
+  //ACTION: edit
+  Categories\editAction($connexion, [
+    'id'=> $_GET['id'],
+    'name'=> $_POST['name']
+  ]);
+  break;
+
 endswitch;
